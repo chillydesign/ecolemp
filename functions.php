@@ -346,11 +346,11 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 
 
 // CUSTOM POST TYPES
-add_action('init', 'create_post_type_video'); 
-add_action('init', 'create_post_type_formation'); 
-add_action('init', 'create_post_type_page_formation'); 
-add_action('init', 'create_post_type_specialisation'); 
-add_action('init', 'create_post_type_viealecole'); 
+add_action('init', 'create_post_type_video');
+add_action('init', 'create_post_type_formation');
+add_action('init', 'create_post_type_page_formation');
+add_action('init', 'create_post_type_specialisation');
+add_action('init', 'create_post_type_viealecole');
 
 
 
@@ -410,7 +410,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function create_post_type_video()
 {
- 
+
     register_post_type('video', // Register Custom Post Type
         array(
         'labels' => array(
@@ -447,7 +447,7 @@ function create_post_type_video()
 
 function create_post_type_formation()
 {
- 
+
     register_post_type('formation', // Register Custom Post Type
         array(
         'labels' => array(
@@ -482,7 +482,7 @@ function create_post_type_formation()
 
 function create_post_type_page_formation()
 {
- 
+
     register_post_type('page_formation', // Register Custom Post Type
         array(
         'labels' => array(
@@ -518,7 +518,7 @@ function create_post_type_page_formation()
 
 function create_post_type_viealecole()
 {
- 
+
     register_post_type('viealecole', // Register Custom Post Type
         array(
         'labels' => array(
@@ -552,10 +552,46 @@ function create_post_type_viealecole()
 }
 
 
+function create_post_type_datesdeformation()
+{
+
+    register_post_type('datesdeformation', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Dates de formation ', 'html5blank'), // Rename these to suit
+            'singular_name' => __('Date de formation', 'html5blank'),
+            'add_new' => __('Ajouter', 'html5blank'),
+            'add_new_item' => __('Ajouter Date de formation', 'html5blank'),
+            'edit' => __('Modifier', 'html5blank'),
+            'edit_item' => __('Edit Date de formation', 'html5blank'),
+            'new_item' => __('Modifier Date de formation', 'html5blank'),
+            'view' => __('Afficher Date de formation', 'html5blank'),
+            'view_item' => __('Afficher Date de formation', 'html5blank'),
+            'search_items' => __('Chercher Date de formation', 'html5blank'),
+            'not_found' => __('Aucune Date de formation trouvée', 'html5blank'),
+            'not_found_in_trash' => __('Aucune Date de formation trouvée dans la Corbeille', 'html5blank')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'category', 'tags'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+
 
 function create_post_type_specialisation()
 {
- 
+
     register_post_type('specialisation', // Register Custom Post Type
         array(
         'labels' => array(
@@ -626,15 +662,15 @@ function search_filter($query) {
 
 
 function chilly_map( $atts, $content = null ) {
-  
+
     $attributes = shortcode_atts( array(
         'location' => "Chemin de Pra 1993, Veysonnaz, Suisse"
     ), $atts );
 
 
-    wp_register_script('googlemaps', 'http://maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU', array(), '0.0.1'); 
+    wp_register_script('googlemaps', 'http://maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU', array(), '0.0.1');
     wp_enqueue_script('googlemaps'); // Enqueue it!
-    wp_register_script('map_script', get_template_directory_uri() . '/js/scripts_map.js', array(), '0.0.1'); 
+    wp_register_script('map_script', get_template_directory_uri() . '/js/scripts_map.js', array(), '0.0.1');
     wp_enqueue_script('map_script'); // Enqueue it!
 
     $address = $attributes['location'];
@@ -674,19 +710,19 @@ function revcon_change_post_object() {
     $labels->menu_name = 'News';
     $labels->name_admin_bar = 'News';
 }
- 
+
  add_action( 'admin_menu', 'revcon_change_post_label' );
  add_action( 'init', 'revcon_change_post_object' );
 
 add_action( 'admin_menu', 'remove_menus' );
 
 function remove_menus(){
-  
+
   // remove_menu_page( 'edit.php' );                   //Posts
   remove_menu_page( 'edit.php?lang=en' );           //Anglais
   remove_menu_page( 'edit.php?post_type=page&lang=en' );           //Anglais
   remove_menu_page( 'edit.php?lang=zh' );           //Français
-  remove_menu_page( 'edit.php?post_type=page&lang=zh' );           //Français     
+  remove_menu_page( 'edit.php?post_type=page&lang=zh' );           //Français
 
   // remove_menu_page( 'upload.php' );              //Media
   remove_menu_page( 'upload.php?lang=en' );              //Media
@@ -704,12 +740,12 @@ function remove_menus(){
   remove_menu_page( 'options-general.php' );        //Settings
   remove_menu_page( 'profile.php' );        //Settings
 
-  
+
 }
 
 
 
-add_filter('acf/settings/show_admin', '__return_false');
+//add_filter('acf/settings/show_admin', '__return_false');
 
 
 
