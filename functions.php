@@ -86,6 +86,14 @@ function html5blank_nav()
 	);
 }
 
+
+
+function wf_version(){
+    return '0.0.1';
+}
+
+
+
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
@@ -112,28 +120,35 @@ function html5blank_conditional_scripts()
     }
 }
 
+
+
+
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('reset', get_template_directory_uri() . '/css/reset.css', array(), '1.0', 'all');
+
+    $tdu = get_template_directory_uri();
+
+
+    wp_register_style('reset', $tdu . '/css/reset.css', array(),  wf_version(), 'all');
     wp_enqueue_style('reset'); // Enqueue it!
 
-    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '1.0', 'all');
+    wp_register_style('bootstrap', $tdu . '/css/bootstrap.css', array(),  wf_version(), 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
 
-    wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('style', $tdu . '/style.css', array(),  wf_version(), 'all');
     wp_enqueue_style('style'); // Enqueue it!
 
-     wp_register_style('unslider', get_template_directory_uri() . '/css/unslider.css', array(), '1.0', 'all');
+     wp_register_style('unslider', $tdu . '/css/unslider.css', array(), wf_version(), 'all');
      wp_enqueue_style('unslider'); // Enqueue it!
 
-     // wp_register_style('lity', get_template_directory_uri() . '/css/lity.min.css', array(), '1.0', 'all');
+     // wp_register_style('lity',$tdu  . '/css/lity.min.css', array(),  wf_version(), 'all');
      // wp_enqueue_style('lity'); // Enqueue it!
 
 
-     wp_register_style('featherlight', get_template_directory_uri() . '/css/featherlight.min.css', array(), '1.0', 'all');
+     wp_register_style('featherlight', $tdu . '/css/featherlight.min.css', array(),  wf_version(), 'all');
      wp_enqueue_style('featherlight'); // Enqueue it!
-     wp_register_style('feathergal', get_template_directory_uri() . '/css/featherlight.gallery.min.css', array(), '1.0', 'all');
+     wp_register_style('feathergal', $tdu  . '/css/featherlight.gallery.min.css', array(),  wf_version(), 'all');
      wp_enqueue_style('feathergal'); // Enqueue it!
 
 }
@@ -653,8 +668,6 @@ function search_filter($query) {
     }
     return $query;
 }
-
-
 
 
 
