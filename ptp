@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ssh ecolemp << EOF
+cd ecolemp.com/httpdocs/wp-content/themes/ecolemp;
+git pull origin master;
+echo "DONE!";
+EOF
+
