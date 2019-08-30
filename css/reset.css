@@ -1,0 +1,207 @@
+html, body, div, span,  object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q,  samp,small, strike, strong, sub, sup, tt, var,b, i,  dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,  figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}
+body {	line-height: 1;}
+ul, ol {list-style:none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}
+table {	border-collapse: collapse;	border-spacing: 0}
+::-moz-selection 	{ background:#ff0; color:#333; }
+::selection 		{ background:#ff0; color:#333; }
+
+
+
+* { -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+
+
+
+body {
+  font-family: 'Rubik', verdana,  sans-serif;
+	font-size: 62.5%;
+	font-weight: normal;
+	line-height: 150%;
+	color:#222;
+	background: white
+}
+
+
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Abril Fatface', cursive; line-height: 150%;
+}
+
+h1, li h1 {font-size: 2em;margin:0 0 0px;font-weight: normal;word-break:break-word}
+h2, li h2 {font-size: 2em;margin:0px 0 30px;font-weight: normal;display:inline-block;line-height: 150%;border-bottom:3px solid #999;padding:0 10px 0 0;}
+h3, li h3 {font-size: 1.8em;margin:0px 0 20px;font-weight:bold;letter-spacing: 0.7px;}
+h4, li h4 {font-size: 1.5em;margin:0px 0 15px;font-weight: normal;}
+h5, li h5 {font-size: 1.5em;margin:0px 0 10px;font-weight:bold;}
+h6, li h6 {font-size: 1.5em;font-weight: bold;padding:0 0 5px;}
+
+
+li p, li li {font-size: inherit;}
+
+
+p {font-size:1.45em;padding:0 0 20px;line-height:170%;; font-weight: 300;}
+li {font-size:1.45em;padding:0 0 5px;line-height: 170%; font-weight: 300; list-style: circle; margin-left: 30px;}
+
+
+
+@media (min-width:768px){
+	h1, li h1 {font-size: 3em}
+	h2, li h2 {font-size: 3em}
+	h3, li h3 {font-size: 2.4em}
+	h4, li h4 {font-size: 1.7em}
+	h5, li h5 {font-size: 1.7em}
+
+}
+
+
+
+a , a h3 {-webkit-transition: all 0.15s;text-decoration: none; color: inherit;}
+
+a:link , a:link h3 {color:#774c9e; text-decoration: underline;}
+a:link  {text-decoration: underline;}
+a:visited, a:visited h3 {color:#774c9e}
+a:hover, a:hover h3 {color:rgb(85, 26, 139)
+;}
+header a, footer a, a h3, a:link h3, h3 a  {text-decoration: none !important;}
+
+
+dl {margin: 0 0 20px;}
+dt {font-weight: bold;font-size:1.6em;margin:10px 0 0;}
+dd {padding:0 0 5px;font-size: 1.6em;line-height: 150%}
+
+
+
+ul.list , ol.list {padding: 0 0 30px 20px;}
+ul.list li {list-style: disc;padding:0 0 5px;}
+ol.list li {list-style: decimal;padding:0 0 5px;}
+
+
+strong, b {font-weight:500;}
+em, i {font-style: italic}
+time {color:#aaa;}
+
+
+pre {background:#ddd;padding:20px;	font-size: 1.4em;margin:20px 0;}
+code {font-family: monospace;}
+
+
+/*TABLES*/
+table { width: 100%; height: auto!important; font-weight: 300; border:solid 1px #ddd; margin-bottom: 30px;}
+ th, thead td {background:#222;color:white;}
+ th,td {padding:9px 9px 6px;font-size: 1.4em}
+ th p, td p{font-size: inherit;}
+ th {font-weight: bold;text-align: left;text-transform: uppercase;letter-spacing:0.7px;}
+ td {border-bottom: 1px solid #ddd;vertical-align: top}
+ tr:last-child td {border-bottom: 0px}
+ tr td {background:white;}
+ tr:nth-child(2n) td {background:#f9f9f9;}
+ tfoot td {background:#222;color: white}
+ table li {list-style: circle; font-size: 1em; margin-left: 20px;}
+table ul {margin-top: -20px;}
+
+
+/*FORMS */
+li.field {font-size:1em;margin:0 0 20px;}
+input {padding:10px;font-size: 1.5em}
+textarea {padding:10px;font-size: 1.5em;width: 100%;height:300px;}
+label {display:block;font-size: 1.5em;text-transform: uppercase;margin:0 0 5px;}
+select {width: 100%;font-size: 1.5em}
+option {padding: 5px}
+
+
+
+
+
+
+/*BUTTON*/
+.button, .button_list li a {
+	display: inline-block;
+	background-color: #774c9e;
+	color:white!important;
+	padding:10px 20px;
+	border-radius: 8px;
+	border:4px double white;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	word-break:break-word;
+	transition: all 0.3s
+
+}
+
+
+.button:hover , .button_list li a:hover {background-color: #4f2a71;color: white}
+a.button:active , .button_list li a:active {top:1px;position: relative;background-color: #bbb}
+.button.button-block {display: block;text-align: center;width:100%;}
+
+
+
+.button-success {
+	background-color:#3f2;
+	color: white!important;
+}
+
+.button_list li {display: inline;font-size: 1em}
+.button_list li a {padding:10px;margin:0 0 0 -3px;border-radius: 0;border-left:1px solid #ddd;}
+.button_list li:first-child a {border-radius: 4px  0  0 4px;border-left: 0}
+.button_list li:last-child a {border-radius: 0 4px 4px 0}
+
+
+
+/*ALERTS*/
+.alert{padding:20px;margin-bottom:20px;margin-top:20px;border:1px solid transparent;border-radius:4px}
+.alert-dismissable,.alert-dismissible{padding-right:35px}
+.alert-success  {background-color:#3f2 ;}
+.alert-info{background-color:#32f;}
+.alert-warning{background-color:#ff2;}
+.alert-danger {background-color:#f32;}
+.alert a  {color:white!important;}
+.alert-small {margin:0;display: inline-block;padding:3px 6px;color: white;border-radius: 4px;font-size: 80%;font-weight: normal;}
+
+
+
+.clear {clear:both;}
+
+.box {background-color: #ddd;padding: 20px;margin:0 0 10px;}
+
+
+.tabs {
+	margin:0 0 20px;
+	border-bottom: 1px solid #eee;
+	padding:0 10px;
+}
+.tab {display: inline-block;padding: 0;margin: 0}
+.tab a {
+	display:inline-block;
+	padding:10px;
+	margin:0 3px -1px;
+	border:1px solid #eee;
+	border-radius: 5px 5px 0  0;
+	color:#666;
+	background-color:#f7f7f7 ;
+	box-shadow: 0 -5px 15px rgba(0,0,0,0.04) inset;
+}
+.active_tab a{
+	background-color: white;
+	border-bottom: 1px solid white;
+	box-shadow: 0 0 0;
+	color: #222;
+}
+body .primary_tab a {
+
+	color:white!important;
+}
+
+
+
+
+
+
+
+
+
