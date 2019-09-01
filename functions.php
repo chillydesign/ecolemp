@@ -366,7 +366,7 @@ add_action('init', 'create_post_type_formation');
 add_action('init', 'create_post_type_page_formation');
 add_action('init', 'create_post_type_specialisation');
 add_action('init', 'create_post_type_viealecole');
-add_action('init', 'datesdeformation');
+add_action('init', 'create_post_type_datesdeformation');
 
 
 
